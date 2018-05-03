@@ -37,6 +37,8 @@ print("Please type in a number to see all of the words with that value.\n"
 choice = input("")
 
 try:
+    print("I found {no_results} result(s) for your number ({choice}). Here is the list:".format(
+        no_results=len(nums[int(choice)]), choice=choice))
     print(nums[int(choice)]) if int(choice) in nums.keys() else print("No words found with that value.")
 except (KeyError, ValueError):
     total = word_calc(choice)
